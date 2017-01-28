@@ -15,14 +15,16 @@
         <scene sceneID="Ajw-Tv-eaN">
             <objects>
                 <tableViewController storyboardIdentifier="home" id="tDm-0k-4Ti" customClass="TableViewController" customModule="notes2" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" tag="1" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="OJw-Ta-nTx">
+                    <tableView key="view" clipsSubviews="YES" tag="1" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="OJw-Ta-nTx">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="kVV-JM-ULY">
                             <rect key="frame" x="0.0" y="72" width="375" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <state key="normal" title="Button"/>
+                            <state key="normal" title="New">
+                                <color key="titleShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
                             <connections>
                                 <segue destination="MSb-BH-oMy" kind="show" id="MVD-fo-73j">
                                     <nil key="action"/>
@@ -37,24 +39,19 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NOI-VR-C2x">
-                                            <rect key="frame" x="8" y="4" width="51" height="31"/>
-                                        </switch>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kd8-96-TdI">
-                                            <rect key="frame" x="175" y="11" width="46" height="21"/>
+                                            <rect key="frame" x="29" y="12" width="306" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="kd8-96-TdI" secondAttribute="height" multiplier="102:7" id="xK6-ZC-xc1"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="kd8-96-TdI" firstAttribute="centerX" secondItem="TCX-KQ-TuZ" secondAttribute="centerX" id="BJf-2V-kQm"/>
-                                        <constraint firstAttribute="leadingMargin" secondItem="NOI-VR-C2x" secondAttribute="leading" id="Bzm-Xg-Lxp"/>
-                                        <constraint firstItem="kd8-96-TdI" firstAttribute="width" secondItem="TCX-KQ-TuZ" secondAttribute="height" multiplier="46:43" id="EbT-WS-iDj"/>
-                                        <constraint firstItem="NOI-VR-C2x" firstAttribute="top" secondItem="TCX-KQ-TuZ" secondAttribute="topMargin" constant="-4" id="QfL-aS-vXI"/>
-                                        <constraint firstItem="kd8-96-TdI" firstAttribute="top" secondItem="TCX-KQ-TuZ" secondAttribute="topMargin" constant="3" id="WIn-fi-OMK"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="kd8-96-TdI" secondAttribute="trailing" id="u1N-at-SSb"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="NOI-VR-C2x" secondAttribute="trailing" constant="310" id="yx8-k7-hDe"/>
+                                        <constraint firstItem="kd8-96-TdI" firstAttribute="centerY" secondItem="TCX-KQ-TuZ" secondAttribute="centerY" id="Ibm-cG-VNJ"/>
+                                        <constraint firstItem="kd8-96-TdI" firstAttribute="centerX" secondItem="TCX-KQ-TuZ" secondAttribute="centerX" id="tv7-O0-r4K"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <accessibility key="accessibilityConfiguration" identifier="Cell"/>
@@ -82,15 +79,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="41q-Rg-i0V">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Your Note..." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="41q-Rg-i0V">
                                 <rect key="frame" x="0.0" y="45" width="375" height="30"/>
-                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JxK-z5-7lm">
                                 <rect key="frame" x="0.0" y="115" width="375" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Add"/>
                                 <connections>
                                     <action selector="doneButtonClicked:" destination="MSb-BH-oMy" eventType="touchUpInside" id="edH-sE-W9V"/>
                                 </connections>
@@ -107,6 +106,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="doneButton" destination="JxK-z5-7lm" id="FOM-cS-BPw"/>
                         <outlet property="noteTextField" destination="41q-Rg-i0V" id="Kf5-MB-g6p"/>
                     </connections>
                 </viewController>
